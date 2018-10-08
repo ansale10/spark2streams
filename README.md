@@ -1,2 +1,2 @@
 # spark2streams
-testing jenkins
+testing jenkins localhost
