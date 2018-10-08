@@ -30,8 +30,9 @@ object tweetEngine {
       "group.id" -> "mygroup_id",
       "auto.offset.reset" -> "earliest")
 
-    val line = KafkaUtils.createDirectStream[String,String](
-      ssc, PreferConsistent, ConsumerStrategies.Subscribe[String, String](topics, kafkaParams))
+    val line = KafkaUtils
+      .createDirectStream[String,String](ssc, PreferConsistent, ConsumerStrategies
+        .Subscribe[String, String](topics, kafkaParams))
 
     val lineMapper = line.map(record=>record.value().toString.toLowerCase)
     val lineFlatMap = lineMapper.flatMap(_.split(" "))
@@ -44,7 +45,7 @@ object tweetEngine {
 
     //lineMapper.print
 
-    //lineFlatMap.print
+    lineFlatMap.print
 
     topCounts.print
 
