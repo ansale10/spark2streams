@@ -1,2 +1,2 @@
 # spark2streams
-testing jenkins localhost proxy
+testing jenkins localhost ngrok proxy
