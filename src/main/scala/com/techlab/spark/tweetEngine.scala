@@ -1,4 +1,4 @@
-package com.techfield.spark
+package com.techlab.spark
 
 import org.apache.spark
 import org.apache.spark.streaming._
