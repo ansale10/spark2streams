@@ -42,10 +42,8 @@ object tweetEngine {
       .map { case (topic, count) => (count, topic) }
       .transform(_.sortByKey(false))
 
-    //prints raw twitter
     //lineMapper.print
 
-    // prints twitter with format
     //lineFlatMap.print
 
     topCounts.print
