@@ -1,11 +1,9 @@
 package com.techlab.spark
 
-import org.apache.spark
 import org.apache.spark.streaming._
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
-import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{SaveMode, SparkSession}
 
 object tweetEngine {
